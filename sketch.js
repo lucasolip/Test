@@ -8,12 +8,11 @@ function preload() {
 }
 
 function windowResized() {
-  //resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  //createCanvas(600, 600);
   stroke(0);
   noFill();
   imageMode(CENTER);
