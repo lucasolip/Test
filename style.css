@@ -10,12 +10,15 @@ canvas {
 }
 
 h1 {
+  font-family: cursive;
   color: #F0F0F0;
   text-align: center;
-  background-color: rgba(0,0,0,.4);
+  background-color: rgba(0,0,0,.8);
   margin: 0;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  width: 100%;
+  padding: 10px;
 }
