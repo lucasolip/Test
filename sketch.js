@@ -1,7 +1,4 @@
-let agents;
-let gravity;
-let mouse;
-let sprite;
+let agents, gravity, mouse, sprite;
 
 function preload() {
   sprite = loadImage("peh.png");
@@ -12,6 +9,9 @@ function windowResized() {
 }
 
 function setup() {
+  let mobile = window.mobileCheck();
+  let population = mobile? 25 : 100;
+  let sizeFactor = mobile? 3 : 1;
   pixelDensity(1);
   createCanvas(windowWidth, windowHeight);
   stroke(0);
@@ -20,8 +20,8 @@ function setup() {
   mouse = createVector(mouseX, mouseY);
   gravity = createVector(0, -9.81);
   agents = [];
-  for (let i = 0; i < 25; i++) {
-    agents.push(new Agent(createVector(random(width), random(height))));
+  for (let i = 0; i < population; i++) {
+    agents.push(new Agent(createVector(random(width), random(height)), sizeFactor));
   }
 }
 

@@ -1,5 +1,5 @@
 class Agent {
-    constructor(pos) {
+    constructor(pos, sizeFactor) {
         this.pos = pos;
         this.vel = createVector(0, 0);
         this.acc = createVector(0, 0);
@@ -7,6 +7,7 @@ class Agent {
         this.maxforce = 1;
         this.seed = random(100000);
         this.noiseOffset = 0;
+        this.sizeFactor = sizeFactor;
     }
   
     noisyMovement() {
@@ -77,7 +78,7 @@ class Agent {
       let angle = this.vel.heading();
       
       rotate(angle + PI);
-      image(sprite, 0, 0, 23, 16);
+      image(sprite, 0, 0, 23 * this.sizeFactor, 16 * this.sizeFactor);
       pop();
       //ellipse(this.pos.x, this.pos.y, 5);
     }
