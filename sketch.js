@@ -14,6 +14,7 @@ function setup() {
   let sizeFactor = mobile? 3 : 1;
   pixelDensity(1);
   createCanvas(windowWidth, windowHeight);
+  noSmooth();
   stroke(0);
   noFill();
   imageMode(CENTER);
