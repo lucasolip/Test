@@ -20,7 +20,7 @@ function setup() {
   mouse = createVector(mouseX, mouseY);
   gravity = createVector(0, -9.81);
   agents = [];
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 25; i++) {
     agents.push(new Agent(createVector(random(width), random(height))));
   }
 }
