@@ -12,6 +12,7 @@ function windowResized() {
 }
 
 function setup() {
+  pixelDensity(1);
   createCanvas(windowWidth, windowHeight);
   stroke(0);
   noFill();
